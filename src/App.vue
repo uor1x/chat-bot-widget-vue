@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <ChatWidget />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ChatWidget from './components/ChatWidget.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    ChatWidget,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    font-family: 'Montserrat', sans-serif;
+  }
+  body{
+    background-image: url('./assets/pattern-background-1-scaled.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+  }
 </style>
